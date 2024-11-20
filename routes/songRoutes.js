@@ -3,7 +3,7 @@ const songController = require('../controllers/songController');
 const router = express.Router();
 
 // Route for creating a song
-router.post('/', songController.createSong);
+router.post('/add', songController.createSong);
 
 // Route for getting all songs
 router.get('/', songController.getSongs);

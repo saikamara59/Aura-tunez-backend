@@ -49,7 +49,7 @@ exports.updateArtist = async (req, res) => {
         const artist = await Artist.findByIdAndUpdate(
             req.params.id,
             { name, genre, bio, birthDate },
-            { new: true } // return the updated document
+            { new: true } 
         );
 
         if (!artist) {

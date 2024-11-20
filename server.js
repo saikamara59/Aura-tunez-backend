@@ -15,8 +15,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json()); 
 // Routes
-app.use('/api/artists', artistRoutes);
-app.use('/api/songs', songRoutes);
+app.use('/artists', artistRoutes);
+app.use('/songs', songRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)

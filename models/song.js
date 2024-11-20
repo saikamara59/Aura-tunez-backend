@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const songSchema = new mongoose.Schema({
     title: { type: String, required: true },
-    artist: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist', required: true },
+    artist: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist' },
     genre: { type: String },
     releaseDate: { type: Date },
     image: { type: String}

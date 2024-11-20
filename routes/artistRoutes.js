@@ -3,7 +3,7 @@ const artistController = require('../controllers/artistController');
 const router = express.Router();
 
 // Route for creating an artist
-router.post('/', artistController.createArtist);
+router.post('/add', artistController.createArtist);
 
 // Route for getting all artists
 router.get('/', artistController.getArtists);
