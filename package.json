@@ -10,7 +10,7 @@
   },
   "name": "aura-tunezz",
   "version": "1.0.0",
-  "description": "",
+  "description": "## About - Aura Tunes is a dynamic, personmalized streaming music web app that allows you to create, add, delete, and update songs and artist that you create through our database",
   "main": "server.js",
   "devDependencies": {},
   "scripts": {
