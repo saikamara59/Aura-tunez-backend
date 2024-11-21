@@ -4,9 +4,9 @@ const songSchema = new mongoose.Schema({
     title: { type: String, required: true },
     artist: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist' },
     genre: { type: String },
-    releaseDate: { type: Date },
+    releaseDate: { type: String },
     image: { type: String}
 });
 
-const Song = mongoose.model('Song', songSchema);
-module.exports = Song;
+
+module.exports = mongoose.model('Song', songSchema);

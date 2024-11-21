@@ -7,5 +7,4 @@ const artistSchema = new mongoose.Schema({
     birthDate: { type: String }
 });
 
-const Artist = mongoose.model('Artist', artistSchema);
-module.exports = Artist;
+module.exports = mongoose.model('Artist', artistSchema);
