@@ -22,6 +22,7 @@ exports.createSong = async (req, res) => {
         await song.save();
         res.status(201).json(song);
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
@@ -32,6 +33,7 @@ exports.getSongs = async (req, res) => {
         const songs = await Song.find().populate('artist');
         res.json(songs);
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
@@ -45,6 +47,7 @@ exports.deleteSong = async (req, res) => {
         }
         res.json({ message: 'Song deleted successfully!' });
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
@@ -71,6 +74,7 @@ exports.updateSong = async (req, res) => {
 
         res.json(song);
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };

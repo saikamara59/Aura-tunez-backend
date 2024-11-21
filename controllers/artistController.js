@@ -14,6 +14,7 @@ exports.createArtist = async (req, res) => {
         await artist.save();
         res.status(201).json(artist);
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
@@ -22,8 +23,9 @@ exports.createArtist = async (req, res) => {
 exports.getArtists = async (req, res) => {
     try {
         const artists = await Artist.find();
-        res.json(artists);
+        res.status(200).json(artists);
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
@@ -37,6 +39,7 @@ exports.deleteArtist = async (req, res) => {
         }
         res.json({ message: 'Artist deleted successfully!' });
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
@@ -58,7 +61,7 @@ exports.updateArtist = async (req, res) => {
 
         res.json(artist);
     } catch (err) {
+        console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
-
