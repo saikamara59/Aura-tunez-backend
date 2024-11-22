@@ -27,17 +27,16 @@ exports.createSong = async (req, res) => {
     }
 };
 
-// Get all songs
-// Populate only the 'name' field of the artist
 exports.getSongs = async (req, res) => {
     try {
-        const songs = await Song.find().populate('artist', 'name');
+        const songs = await Song.find().populate('artist', 'name')
         res.json(songs);
     } catch (err) {
         console.log(err);
         res.status(500).json({ message: err.message });
     }
 };
+
 
 
 // Delete a song
