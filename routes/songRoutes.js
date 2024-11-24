@@ -12,6 +12,6 @@ router.get('/', songController.getSongs);
 router.delete('/:id', songController.deleteSong);
 
 // Route for updating a song
-router.put('/:id', songController.updateSong);
+router.put('/:id/update', songController.updateSong);
 
 module.exports = router;
