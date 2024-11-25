@@ -103,18 +103,18 @@ exports.deleteSong = async (req, res) => {
     }
 };
 
-router.delete('/:id', async (req,res) => {
-    try {
-        const deletedSong = await Song.findByIdAndDelete(req.params.id);
-        res.status(200).json({message:'Song deleted successfully!'});
-    } catch (error) {
-        const deletedResponse = {error:error.message};
-        if (res.status(404)) {
-            return res.status(404).json(deletedResponse);
-        }
-        res.status(500).json(deletedResponse);
-    }
-})
+// router.delete('/:id', async (req,res) => {
+//     try {
+//         const deletedSong = await Song.findByIdAndDelete(req.params.id);
+//         res.status(200).json({message:'Song deleted successfully!'});
+//     } catch (error) {
+//         const deletedResponse = {error:error.message};
+//         if (res.status(404)) {
+//             return res.status(404).json(deletedResponse);
+//         }
+//         res.status(500).json(deletedResponse);
+//     }
+// })
 
 // // Update a song
 exports.updateSong = async (req, res) => {
