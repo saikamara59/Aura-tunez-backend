@@ -20,7 +20,7 @@ exports.createSong = async (req, res) => {
             artist,
             genre,
             releaseDate,
-            image
+            image,
         });
         await song.save();
         res.status(201).json(song);
