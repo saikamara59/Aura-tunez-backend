@@ -118,12 +118,12 @@ exports.deleteSong = async (req, res) => {
 
 // // Update a song
 exports.updateSong = async (req, res) => {
-    const { title, artist, genre, releaseDate } = req.body;
-    let image = null;
+    const { title, artist, genre, releaseDate,image } = req.body;
+    // let image = null;
 
-    if (req.file) {
-        image = path.join('uploads', req.file.filename);
-    }
+    // if (req.file) {
+    //     image = path.join('uploads', req.file.filename);
+    // }
 
     try {
         const song = await Song.findByIdAndUpdate(
