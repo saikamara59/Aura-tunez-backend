@@ -7,12 +7,12 @@ const Song = require('../models/song');
 
 
 exports.createSong = async (req, res) => {
-    const { title, artist, genre, releaseDate } = req.body;
-    let image = '';
+    const { title, artist, genre, releaseDate,image } = req.body;
+    // let image = '';
 
-    if (req.file) {
-        image = path.join('uploads', req.file.filename);
-    }
+    // if (req.file) {
+    //     image = path.join('uploads', req.file.filename);
+    // }
 
     try {
         const song = new Song({
