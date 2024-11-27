@@ -1,17 +1,8 @@
 const path = require("path");
 const Song = require("../models/song");
-// const router = express.router();
-// const express = require('express');
-
-// Create a song
 
 exports.createSong = async (req, res) => {
   const { title, artist, genre, releaseDate, image } = req.body;
-  // let image = '';
-
-  // if (req.file) {
-  //     image = path.join('uploads', req.file.filename);
-  // }
 
   try {
     const song = new Song({
